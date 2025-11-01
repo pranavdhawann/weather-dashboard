@@ -1,8 +1,3 @@
----
-title: "Weather Trends and Alerts Dashboard"
-output: github_document
----
-
 # Weather Trends and Alerts Dashboard
 
 A fully cloud-native weather monitoring application built on AWS, providing real-time weather data collection, forecasting, and automated alerts.
