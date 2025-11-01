@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ea7f4f2b1b8c3bb271d50b2f73860e4b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ea7f4f2b1b8c3bb271d50b2f73860e4b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ea7f4f2b1b8c3bb271d50b2f73860e4b = L.map(
+                "map_ea7f4f2b1b8c3bb271d50b2f73860e4b",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": [
+[
+-90,
+-180,
+],
+[
+90,
+180,
+],
+],
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6dd639c0be4b2ff6815b66c1776bc928 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6dd639c0be4b2ff6815b66c1776bc928.addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var marker_08c00a91883830e101fcdb5baf45bf8c = L.marker(
+                [25.2582, 55.3047],
+                {
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var div_icon_e872c19efb79177938526dac3cd93a71 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 32px; text-align: center;\"\u003e\u2600\ufe0f\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_0f22f5d04242bf72a4cb0068fcc4fcd9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cee50fa8d5be181fcfc0681d831b07ca = $(`<div id="html_cee50fa8d5be181fcfc0681d831b07ca" style="width: 100.0%; height: 100.0%;">             <div style="font-family: 'Inter', Arial, sans-serif; min-width: 200px;">                 <h3 style="margin: 0 0 10px 0; font-size: 1.3em; color: #1d1d1f;">                     ☀️ Dubai                 </h3>                 <div style="font-size: 2.5em; font-weight: 300; margin: 10px 0; color: #0071e3;">                     88°F                 </div>                 <div style="color: #86868b; margin-bottom: 12px; text-transform: capitalize;">                     clear sky                 </div>                 <div style="border-top: 1px solid #e5e5e7; padding-top: 10px; font-size: 0.9em;">                     <div><strong>Feels like:</strong> 90°F</div>                     <div><strong>Humidity:</strong> 48.0%</div>                     <div><strong>Wind:</strong> 4.61 mph</div>                     <div><strong>Pressure:</strong> 1013.0</div>                 </div>             </div>             </div>`)[0];
+                popup_0f22f5d04242bf72a4cb0068fcc4fcd9.setContent(html_cee50fa8d5be181fcfc0681d831b07ca);
+            
+        
+
+        marker_08c00a91883830e101fcdb5baf45bf8c.bindPopup(popup_0f22f5d04242bf72a4cb0068fcc4fcd9)
+        ;
+
+        
+    
+    
+            marker_08c00a91883830e101fcdb5baf45bf8c.bindTooltip(
+                `<div>
+                     Dubai: 88°F
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08c00a91883830e101fcdb5baf45bf8c.setIcon(div_icon_e872c19efb79177938526dac3cd93a71);
+            
+    
+            var marker_422ca38c0a69f6212443f1f8b5f23afd = L.marker(
+                [51.5085, -0.1257],
+                {
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var div_icon_9ed912f4be2ccf737816af72b3c6b38f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 32px; text-align: center;\"\u003e\u2601\ufe0f\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_0e09aa8407e0e95471bc73420552a5cd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8b0eb1e14a54a2bd373b8e4617dd5540 = $(`<div id="html_8b0eb1e14a54a2bd373b8e4617dd5540" style="width: 100.0%; height: 100.0%;">             <div style="font-family: 'Inter', Arial, sans-serif; min-width: 200px;">                 <h3 style="margin: 0 0 10px 0; font-size: 1.3em; color: #1d1d1f;">                     ☁️ London                 </h3>                 <div style="font-size: 2.5em; font-weight: 300; margin: 10px 0; color: #0071e3;">                     51°F                 </div>                 <div style="color: #86868b; margin-bottom: 12px; text-transform: capitalize;">                     broken clouds                 </div>                 <div style="border-top: 1px solid #e5e5e7; padding-top: 10px; font-size: 0.9em;">                     <div><strong>Feels like:</strong> 50°F</div>                     <div><strong>Humidity:</strong> 88.0%</div>                     <div><strong>Wind:</strong> 5.75 mph</div>                     <div><strong>Pressure:</strong> 1005.0</div>                 </div>             </div>             </div>`)[0];
+                popup_0e09aa8407e0e95471bc73420552a5cd.setContent(html_8b0eb1e14a54a2bd373b8e4617dd5540);
+            
+        
+
+        marker_422ca38c0a69f6212443f1f8b5f23afd.bindPopup(popup_0e09aa8407e0e95471bc73420552a5cd)
+        ;
+
+        
+    
+    
+            marker_422ca38c0a69f6212443f1f8b5f23afd.bindTooltip(
+                `<div>
+                     London: 51°F
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_422ca38c0a69f6212443f1f8b5f23afd.setIcon(div_icon_9ed912f4be2ccf737816af72b3c6b38f);
+            
+    
+            var marker_40fd93405e05faa15e37ff55b2696a7d = L.marker(
+                [19.0144, 72.8479],
+                {
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var div_icon_921c1f4c8285b5d9e7768935bf7b8c14 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 32px; text-align: center;\"\u003e\ud83c\udf2b\ufe0f\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_cd144222f39cfee10aa929e26e007b8d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8910d62a65065bcecb5cf479d63cea95 = $(`<div id="html_8910d62a65065bcecb5cf479d63cea95" style="width: 100.0%; height: 100.0%;">             <div style="font-family: 'Inter', Arial, sans-serif; min-width: 200px;">                 <h3 style="margin: 0 0 10px 0; font-size: 1.3em; color: #1d1d1f;">                     🌫️ Mumbai                 </h3>                 <div style="font-size: 2.5em; font-weight: 300; margin: 10px 0; color: #0071e3;">                     81°F                 </div>                 <div style="color: #86868b; margin-bottom: 12px; text-transform: capitalize;">                     mist                 </div>                 <div style="border-top: 1px solid #e5e5e7; padding-top: 10px; font-size: 0.9em;">                     <div><strong>Feels like:</strong> 87°F</div>                     <div><strong>Humidity:</strong> 89.0%</div>                     <div><strong>Wind:</strong> 3.44 mph</div>                     <div><strong>Pressure:</strong> 1012.0</div>                 </div>             </div>             </div>`)[0];
+                popup_cd144222f39cfee10aa929e26e007b8d.setContent(html_8910d62a65065bcecb5cf479d63cea95);
+            
+        
+
+        marker_40fd93405e05faa15e37ff55b2696a7d.bindPopup(popup_cd144222f39cfee10aa929e26e007b8d)
+        ;
+
+        
+    
+    
+            marker_40fd93405e05faa15e37ff55b2696a7d.bindTooltip(
+                `<div>
+                     Mumbai: 81°F
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_40fd93405e05faa15e37ff55b2696a7d.setIcon(div_icon_921c1f4c8285b5d9e7768935bf7b8c14);
+            
+    
+            var marker_d38ed136ee0b5b002fb3c367600d3386 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var div_icon_bd09f03515416f66e3a64aa8350d6f28 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 32px; text-align: center;\"\u003e\u2601\ufe0f\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_cb42766d1dabdeba1b5f6d3c97b0bd6e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a1ab55d068f4e060ec63884fb4c3ba59 = $(`<div id="html_a1ab55d068f4e060ec63884fb4c3ba59" style="width: 100.0%; height: 100.0%;">             <div style="font-family: 'Inter', Arial, sans-serif; min-width: 200px;">                 <h3 style="margin: 0 0 10px 0; font-size: 1.3em; color: #1d1d1f;">                     ☁️ New York                 </h3>                 <div style="font-size: 2.5em; font-weight: 300; margin: 10px 0; color: #0071e3;">                     58°F                 </div>                 <div style="color: #86868b; margin-bottom: 12px; text-transform: capitalize;">                     overcast clouds                 </div>                 <div style="border-top: 1px solid #e5e5e7; padding-top: 10px; font-size: 0.9em;">                     <div><strong>Feels like:</strong> 55°F</div>                     <div><strong>Humidity:</strong> 42.0%</div>                     <div><strong>Wind:</strong> 20.71 mph</div>                     <div><strong>Pressure:</strong> 1013.0</div>                 </div>             </div>             </div>`)[0];
+                popup_cb42766d1dabdeba1b5f6d3c97b0bd6e.setContent(html_a1ab55d068f4e060ec63884fb4c3ba59);
+            
+        
+
+        marker_d38ed136ee0b5b002fb3c367600d3386.bindPopup(popup_cb42766d1dabdeba1b5f6d3c97b0bd6e)
+        ;
+
+        
+    
+    
+            marker_d38ed136ee0b5b002fb3c367600d3386.bindTooltip(
+                `<div>
+                     New York: 58°F
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d38ed136ee0b5b002fb3c367600d3386.setIcon(div_icon_bd09f03515416f66e3a64aa8350d6f28);
+            
+    
+            var marker_e28a0498c7780cb3e0847da4a99131dc = L.marker(
+                [48.8534, 2.3488],
+                {
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var div_icon_3161f704765663e47fca445291556109 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 32px; text-align: center;\"\u003e\u2601\ufe0f\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_5d759de03aa449af3ec0d4eb837f3a4c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2e9545e69075b7982499253a947ed303 = $(`<div id="html_2e9545e69075b7982499253a947ed303" style="width: 100.0%; height: 100.0%;">             <div style="font-family: 'Inter', Arial, sans-serif; min-width: 200px;">                 <h3 style="margin: 0 0 10px 0; font-size: 1.3em; color: #1d1d1f;">                     ☁️ Paris                 </h3>                 <div style="font-size: 2.5em; font-weight: 300; margin: 10px 0; color: #0071e3;">                     55°F                 </div>                 <div style="color: #86868b; margin-bottom: 12px; text-transform: capitalize;">                     broken clouds                 </div>                 <div style="border-top: 1px solid #e5e5e7; padding-top: 10px; font-size: 0.9em;">                     <div><strong>Feels like:</strong> 54°F</div>                     <div><strong>Humidity:</strong> 92.0%</div>                     <div><strong>Wind:</strong> 10.36 mph</div>                     <div><strong>Pressure:</strong> 1012.0</div>                 </div>             </div>             </div>`)[0];
+                popup_5d759de03aa449af3ec0d4eb837f3a4c.setContent(html_2e9545e69075b7982499253a947ed303);
+            
+        
+
+        marker_e28a0498c7780cb3e0847da4a99131dc.bindPopup(popup_5d759de03aa449af3ec0d4eb837f3a4c)
+        ;
+
+        
+    
+    
+            marker_e28a0498c7780cb3e0847da4a99131dc.bindTooltip(
+                `<div>
+                     Paris: 55°F
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e28a0498c7780cb3e0847da4a99131dc.setIcon(div_icon_3161f704765663e47fca445291556109);
+            
+    
+            var marker_20ce1de1ca898f9af539c8eb8e95a045 = L.marker(
+                [-23.5475, -46.6361],
+                {
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var div_icon_57aad6c409d37d1c687f5dc0ba7b0502 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 32px; text-align: center;\"\u003e\u2600\ufe0f\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_2d21aade605174fe1ccd5ad38725d17b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_47ee0ed1232a167dff95e398acd7e12d = $(`<div id="html_47ee0ed1232a167dff95e398acd7e12d" style="width: 100.0%; height: 100.0%;">             <div style="font-family: 'Inter', Arial, sans-serif; min-width: 200px;">                 <h3 style="margin: 0 0 10px 0; font-size: 1.3em; color: #1d1d1f;">                     ☀️ São Paulo                 </h3>                 <div style="font-size: 2.5em; font-weight: 300; margin: 10px 0; color: #0071e3;">                     74°F                 </div>                 <div style="color: #86868b; margin-bottom: 12px; text-transform: capitalize;">                     clear sky                 </div>                 <div style="border-top: 1px solid #e5e5e7; padding-top: 10px; font-size: 0.9em;">                     <div><strong>Feels like:</strong> 75°F</div>                     <div><strong>Humidity:</strong> 80.0%</div>                     <div><strong>Wind:</strong> 10.36 mph</div>                     <div><strong>Pressure:</strong> 1016.0</div>                 </div>             </div>             </div>`)[0];
+                popup_2d21aade605174fe1ccd5ad38725d17b.setContent(html_47ee0ed1232a167dff95e398acd7e12d);
+            
+        
+
+        marker_20ce1de1ca898f9af539c8eb8e95a045.bindPopup(popup_2d21aade605174fe1ccd5ad38725d17b)
+        ;
+
+        
+    
+    
+            marker_20ce1de1ca898f9af539c8eb8e95a045.bindTooltip(
+                `<div>
+                     São Paulo: 74°F
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_20ce1de1ca898f9af539c8eb8e95a045.setIcon(div_icon_57aad6c409d37d1c687f5dc0ba7b0502);
+            
+    
+            var marker_1b8bb5f32b212fa576f010bed7ac52f2 = L.marker(
+                [1.2897, 103.8501],
+                {
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var div_icon_6169f97e70d57ec2e8175bb165f9085a = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 32px; text-align: center;\"\u003e\u2601\ufe0f\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_8f52d35d5f6f5de7ab261804a91b5cc8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_882246163cea5667aa24e04819503922 = $(`<div id="html_882246163cea5667aa24e04819503922" style="width: 100.0%; height: 100.0%;">             <div style="font-family: 'Inter', Arial, sans-serif; min-width: 200px;">                 <h3 style="margin: 0 0 10px 0; font-size: 1.3em; color: #1d1d1f;">                     ☁️ Singapore                 </h3>                 <div style="font-size: 2.5em; font-weight: 300; margin: 10px 0; color: #0071e3;">                     84°F                 </div>                 <div style="color: #86868b; margin-bottom: 12px; text-transform: capitalize;">                     broken clouds                 </div>                 <div style="border-top: 1px solid #e5e5e7; padding-top: 10px; font-size: 0.9em;">                     <div><strong>Feels like:</strong> 94°F</div>                     <div><strong>Humidity:</strong> 79.0%</div>                     <div><strong>Wind:</strong> 6.91 mph</div>                     <div><strong>Pressure:</strong> 1010.0</div>                 </div>             </div>             </div>`)[0];
+                popup_8f52d35d5f6f5de7ab261804a91b5cc8.setContent(html_882246163cea5667aa24e04819503922);
+            
+        
+
+        marker_1b8bb5f32b212fa576f010bed7ac52f2.bindPopup(popup_8f52d35d5f6f5de7ab261804a91b5cc8)
+        ;
+
+        
+    
+    
+            marker_1b8bb5f32b212fa576f010bed7ac52f2.bindTooltip(
+                `<div>
+                     Singapore: 84°F
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1b8bb5f32b212fa576f010bed7ac52f2.setIcon(div_icon_6169f97e70d57ec2e8175bb165f9085a);
+            
+    
+            var marker_cf9d05a725c6f53cddb38940a726b0e2 = L.marker(
+                [-33.8679, 151.2073],
+                {
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var div_icon_ad721c93611861c832632e22788c3858 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 32px; text-align: center;\"\u003e\u2601\ufe0f\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_6f9946590b4a1f94c0ee6e17fc3fde66 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_01474ecc3e1461541f9eb14ef60d8046 = $(`<div id="html_01474ecc3e1461541f9eb14ef60d8046" style="width: 100.0%; height: 100.0%;">             <div style="font-family: 'Inter', Arial, sans-serif; min-width: 200px;">                 <h3 style="margin: 0 0 10px 0; font-size: 1.3em; color: #1d1d1f;">                     ☁️ Sydney                 </h3>                 <div style="font-size: 2.5em; font-weight: 300; margin: 10px 0; color: #0071e3;">                     64°F                 </div>                 <div style="color: #86868b; margin-bottom: 12px; text-transform: capitalize;">                     broken clouds                 </div>                 <div style="border-top: 1px solid #e5e5e7; padding-top: 10px; font-size: 0.9em;">                     <div><strong>Feels like:</strong> 64°F</div>                     <div><strong>Humidity:</strong> 94.0%</div>                     <div><strong>Wind:</strong> 12.66 mph</div>                     <div><strong>Pressure:</strong> 1013.0</div>                 </div>             </div>             </div>`)[0];
+                popup_6f9946590b4a1f94c0ee6e17fc3fde66.setContent(html_01474ecc3e1461541f9eb14ef60d8046);
+            
+        
+
+        marker_cf9d05a725c6f53cddb38940a726b0e2.bindPopup(popup_6f9946590b4a1f94c0ee6e17fc3fde66)
+        ;
+
+        
+    
+    
+            marker_cf9d05a725c6f53cddb38940a726b0e2.bindTooltip(
+                `<div>
+                     Sydney: 64°F
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cf9d05a725c6f53cddb38940a726b0e2.setIcon(div_icon_ad721c93611861c832632e22788c3858);
+            
+    
+            var marker_6a0f48babc9bd305e192ec60394288c2 = L.marker(
+                [35.6895, 139.6917],
+                {
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var div_icon_6c164f7fc96247165ca68e5a47ed0cf6 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 32px; text-align: center;\"\u003e\u2601\ufe0f\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_99c6ebb453b0a649a256165a8d352c1c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_26d6c4c03497b510a08e496167a5f7bf = $(`<div id="html_26d6c4c03497b510a08e496167a5f7bf" style="width: 100.0%; height: 100.0%;">             <div style="font-family: 'Inter', Arial, sans-serif; min-width: 200px;">                 <h3 style="margin: 0 0 10px 0; font-size: 1.3em; color: #1d1d1f;">                     ☁️ Tokyo                 </h3>                 <div style="font-size: 2.5em; font-weight: 300; margin: 10px 0; color: #0071e3;">                     59°F                 </div>                 <div style="color: #86868b; margin-bottom: 12px; text-transform: capitalize;">                     broken clouds                 </div>                 <div style="border-top: 1px solid #e5e5e7; padding-top: 10px; font-size: 0.9em;">                     <div><strong>Feels like:</strong> 58°F</div>                     <div><strong>Humidity:</strong> 76.0%</div>                     <div><strong>Wind:</strong> 6.91 mph</div>                     <div><strong>Pressure:</strong> 1010.0</div>                 </div>             </div>             </div>`)[0];
+                popup_99c6ebb453b0a649a256165a8d352c1c.setContent(html_26d6c4c03497b510a08e496167a5f7bf);
+            
+        
+
+        marker_6a0f48babc9bd305e192ec60394288c2.bindPopup(popup_99c6ebb453b0a649a256165a8d352c1c)
+        ;
+
+        
+    
+    
+            marker_6a0f48babc9bd305e192ec60394288c2.bindTooltip(
+                `<div>
+                     Tokyo: 59°F
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6a0f48babc9bd305e192ec60394288c2.setIcon(div_icon_6c164f7fc96247165ca68e5a47ed0cf6);
+            
+    
+            var marker_1301934e04da648e4c156da2f14313e8 = L.marker(
+                [43.7001, -79.4163],
+                {
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+    
+            var div_icon_b3578beea6008ec07abd618b1ed481c3 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 32px; text-align: center;\"\u003e\u2601\ufe0f\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_0d05570ef9717155485b575982516904 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_10c785d697b767e8ea0000ef10505491 = $(`<div id="html_10c785d697b767e8ea0000ef10505491" style="width: 100.0%; height: 100.0%;">             <div style="font-family: 'Inter', Arial, sans-serif; min-width: 200px;">                 <h3 style="margin: 0 0 10px 0; font-size: 1.3em; color: #1d1d1f;">                     ☁️ Toronto                 </h3>                 <div style="font-size: 2.5em; font-weight: 300; margin: 10px 0; color: #0071e3;">                     49°F                 </div>                 <div style="color: #86868b; margin-bottom: 12px; text-transform: capitalize;">                     overcast clouds                 </div>                 <div style="border-top: 1px solid #e5e5e7; padding-top: 10px; font-size: 0.9em;">                     <div><strong>Feels like:</strong> 43°F</div>                     <div><strong>Humidity:</strong> 58.0%</div>                     <div><strong>Wind:</strong> 18.01 mph</div>                     <div><strong>Pressure:</strong> 1016.0</div>                 </div>             </div>             </div>`)[0];
+                popup_0d05570ef9717155485b575982516904.setContent(html_10c785d697b767e8ea0000ef10505491);
+            
+        
+
+        marker_1301934e04da648e4c156da2f14313e8.bindPopup(popup_0d05570ef9717155485b575982516904)
+        ;
+
+        
+    
+    
+            marker_1301934e04da648e4c156da2f14313e8.bindTooltip(
+                `<div>
+                     Toronto: 49°F
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1301934e04da648e4c156da2f14313e8.setIcon(div_icon_b3578beea6008ec07abd618b1ed481c3);
+            
+    
+            L.control.fullscreen(
+                {
+  "position": "topright",
+  "title": "Fullscreen",
+  "titleCancel": "Exit fullscreen",
+  "forceSeparateButton": true,
+}
+            ).addTo(map_ea7f4f2b1b8c3bb271d50b2f73860e4b);
+        
+</script>
+</html>

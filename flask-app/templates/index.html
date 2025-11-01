@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Weather Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="animated-bg" id="animatedBg"></div>
+
+    <div class="container">
+        <header>
+            <div class="theme-toggle" id="themeToggle">
+                <span id="themeIcon">🌙</span>
+            </div>
+            <h1>Global Weather Monitor</h1>
+            <p class="header-subtitle">Real-time weather data from around the world</p>
+        </header>
+
+        <div class="map-section">
+            <h2 class="section-title">Interactive Weather Map</h2>
+            <div class="map-container">
+                <iframe id="weatherMap" src="/api/map"></iframe>
+            </div>
+        </div>
+
+        <div class="insights-section">
+            <div class="insights-grid" id="insightsGrid">
+                <div class="loading">Loading insights</div>
+            </div>
+        </div>
+
+        <div class="weather-grid" id="weatherCards">
+            <div class="loading">Loading weather data</div>
+        </div>
+
+        <div class="forecast-section">
+            <h2 class="section-title">5-Day Weather Forecast</h2>
+            <div class="forecast-controls">
+                <label for="forecastCitySelect">Select City:</label>
+                <select id="forecastCitySelect">
+                    <option value="">Choose a city</option>
+                </select>
+            </div>
+            <div class="forecast-grid" id="forecastGrid">
+                <div class="loading">Select a city to view forecast</div>
+            </div>
+        </div>
+
+        <div class="charts-section">
+            <h2 class="section-title">Historical Trends</h2>
+            <div class="chart-controls">
+                <label for="citySelect">City:</label>
+                <select id="citySelect">
+                    <option value="">Select a city</option>
+                </select>
+                <label for="metricSelect">Metric:</label>
+                <select id="metricSelect">
+                    <option value="all">All Metrics</option>
+                    <option value="temp">Temperature Only</option>
+                    <option value="humidity">Humidity Only</option>
+                </select>
+                <label for="dateRangeSelect">Date Range:</label>
+                <select id="dateRangeSelect" class="date-range-selector">
+                    <option value="7">Last 7 Days</option>
+                    <option value="3">Last 3 Days</option>
+                    <option value="1">Last 24 Hours</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <canvas id="weatherChart"></canvas>
+            </div>
+        </div>
+
+        <footer>
+            <p>Last updated: <span id="lastUpdate"></span></p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
