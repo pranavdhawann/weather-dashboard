@@ -1,4 +1,5 @@
 # Weather Trends and Alerts Dashboard
+[Open the web app](http://98.89.56.71:5000/)
 
 A fully cloud-native weather monitoring application built on AWS, providing real-time weather data collection, forecasting, and automated alerts.
 
