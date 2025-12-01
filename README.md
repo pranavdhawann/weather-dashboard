@@ -36,6 +36,16 @@ This project leverages multiple AWS services for a serverless, scalable solution
 - Forecast generation and analysis
 - Automated alerts based on weather conditions
 
+## Screenshots
+
+### Global Weather Monitor Dashboard
+![Dashboard](img/1.png)
+*Interactive weather map displaying real-time weather data from major cities worldwide with automated alerts*
+
+### Weather Forecast and Historical Trends
+![Forecast and Trends](img/2.png)
+*weather forecast and historical trend analysis with customizable metrics and date ranges*
+
 ## Technologies Used
 
 - **Frontend**: Flask, HTML/CSS, JavaScript
