@@ -1,5 +1,7 @@
 # Weather Trends and Alerts Dashboard
-[Open the web app](http://98.89.56.71:5000/)
+
+> **Note:** This project is not live anymore.
+*For detailed architecture and implementation details, see the [project report](documentation/CC-REPORT.pdf).*
 
 A fully cloud-native weather monitoring application built on AWS, providing real-time weather data collection, forecasting, and automated alerts.
 
@@ -55,4 +57,3 @@ This project leverages multiple AWS services for a serverless, scalable solution
 
 ---
 
-*For detailed architecture and implementation details, see the [project report](documentation/CC-REPORT.pdf).*
